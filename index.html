@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png" />
+
+		<title>Frontend Mentor | E-commerce product page</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="mobile.css">
+	</head>
+	<body>
+		<nav>
+			<div class="left-nav">
+				<div class="hambugger nav-bar hidden">
+					<div class="menu-icon" onclick="toggleMenu()"><img src="images/icon-menu.svg" alt=""></div>
+					<div class="hamburg-bg">
+						<ul class="mob-nav-links" id="menu">
+							<span id="close-hamburger" onclick="toggleMenu()">&times;</span>
+							<li><a href="#">Collections</a></li>
+							<li><a href="#">Men</a></li>
+							<li><a href="#">Women</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</div>
+    			</div>
+				
+				<div class="logo">
+					<img src="images/logo.svg" alt="logo" />
+				</div>
+				<div class="links">
+					<div class="link-hover">
+						<a href="">Collections</a>
+						<p><span></span></p>
+					</div>
+					<div class="link-hover">
+						<a href="">Men</a>
+						<p><span></span></p>
+					</div>
+					<div class="link-hover">
+						<a href="">Women</a>
+						<p><span></span></p>
+					</div>
+					<div class="link-hover">
+						<a href="">About</a>
+						<p><span></span></p>
+					</div>
+					<div class="link-hover">
+						<a href="">Contact</a>
+						<p><span></span></p>
+					</div>
+				</div>
+			</div>
+			<div class="right-nav">
+				<div class="cart-icon">
+					<img class="bag-img" src="images/icon-cart.svg" alt="" />
+					<div class="bag-count">
+					</div>
+					<div class="cart hidden">
+						<div class="cart-header" role="title">
+							<h3>Cart</h3>
+						</div>
+						<hr />
+						<div id="caryt-items">
+							<div class="cart-empty">
+								<p>Your cart is empty.</p>
+							</div>
+
+							<div id="cart-items">
+								<div class="cart-item-icon">
+								</div>
+
+								<div class="descrip-price">
+								</div>
+
+								<div class="del-btn">
+								</div>
+							</div>
+
+						</div>
+						<div class="checkout">
+						</div>
+					</div>
+				</div>
+				<div class="avatar">
+					<img src="images/image-avatar.png" alt="" />
+				</div>
+			</div>
+		</nav>
+		<hr />
+
+		<main>
+			<section id="images">
+				<div class="main-image" id="main">
+					<img
+						src="images/image-product-0.jpg"
+						alt="product image"
+						onclick="openLightbox(0)" />
+					<img
+						style="display: none"
+						src="Ecommerce-lightbox/ecommerce-product-page-main/images/image-product-1.jpg" />
+					<img
+						style="display: none"
+						src="Ecommerce-lightbox/ecommerce-product-page-main/images/image-product-2.jpg" />
+					<img
+						style="display: none"
+						src="Ecommerce-lightbox/ecommerce-product-page-main/images/image-product-3.jpg" />
+				</div>
+
+				<div class="mobile-main-image" id="main">
+					<img id="mobile-"
+						src="images/image-product-0.jpg"
+						alt="product image"/>
+					
+					<span class="prev" onclick="changeCarouselImage(-1)">&#10094;</span>
+					<span class="next" onclick="changeCarouselImage(1)">&#10095;</span>
+					<!-- <img
+						style="display: none"
+						src="Ecommerce-lightbox/ecommerce-product-page-main/images/image-product-1.jpg" />
+					<img
+						style="display: none"
+						src="Ecommerce-lightbox/ecommerce-product-page-main/images/image-product-2.jpg" />
+					<img
+						style="display: none"
+						src="Ecommerce-lightbox/ecommerce-product-page-main/images/image-product-3.jpg" /> -->
+				</div>
+
+				<div class="image-thumbnail">
+					<div class="active">
+						<img
+							class="un-opac"
+							src="images/image-product-1-thumbnail.jpg"
+							alt="" />
+					</div>
+					<div class="un-opac">
+						<img src="images/image-product-2-thumbnail.jpg" alt="" />
+					</div>
+					<div class="un-opac">
+						<img src="images/image-product-3-thumbnail.jpg" alt="" />
+					</div>
+					<div class="un-opac">
+						<img src="images/image-product-4-thumbnail.jpg" alt="" />
+					</div>
+				</div>
+			</section>
+
+			<!-- PRODUCT DESCRIPTION -->
+			<section id="description">
+				<div class="description-container">
+					<p>SNEAKER COMPANY</p>
+					<h1>Fall Limited Edition Sneakers</h1>
+					<p class="decrip">
+						These low-profile sneakers are your perfect casual wear companion.
+						Featuring a durable rubber outer sole, they’ll withstand everything
+						the weather can offer.
+					</p>
+					
+					<div class="desk-price">
+						<h1 id="price" class="price">$125.00 <span>50%</span></h1>
+						<del>$250.00</del>
+					</div>
+					
+					<div class="mob-price hidden">
+						<h1 id="price" class="price">$125.00 <span>50%</span></h1>
+						<div><del>$250.00</del></div>
+					</div>
+					<div class="btn">
+						<div class="buttons desk-btns">
+							<button>
+								<span class="increase" 
+									>+</span
+								>0
+								<span class="decrease" 
+									>&#8722</span
+								>
+							</button>
+						</div>
+						<div class="buttons mob-btns">
+							<button>
+								<span class="increase">+</span><span class="value">0</span>
+								<span class="decrease">&#8722</span>
+							</button>
+						</div>
+						<button class="add-to-cart">
+							<img
+								src="images/icon-cart.svg"
+								alt="Cart"
+								width="15"
+								height="15" />Add to cart
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<div class="lightbox" id="lightbox">
+				<span class="close" onclick="closeLightbox()">&times;</span>
+				<span class="prev" onclick="changeLightboxImage(-1)">&#10094;</span>
+				<img id="lightboxImg" />
+				<span class="next" onclick="changeLightboxImage(1)">&#10095;</span>
+				<div class="thumbnails" id="thumbnails"></div>
+			</div>
+		</main>
+
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">SirJaey</a>.
+		</div>
+
+		<script src="script.js"></script>
+		<script src="cart.js"></script>
+	</body>
+</html>
