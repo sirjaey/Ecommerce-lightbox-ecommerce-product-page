@@ -424,9 +424,8 @@ main {
 }
 
 .attribution {
+	font-family: "kumbh-medium";
+	font-size: 0.8rem;
 	padding: 1.5rem;
 	text-align: center;
-	* {
-		font-family: "kumbh-medium";
-	}
 }
