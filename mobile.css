@@ -227,6 +227,13 @@
 		z-index: 10;
 	}
 
+	.bag-count {
+		left: 77%;
+		padding: 0 3px;
+		position: absolute;
+		top: 5%;
+	}
+
 	#cart-items {
 		display: flex;
 		justify-content: space-between;
@@ -240,13 +247,13 @@
 		width: 15%;
 		content: url(images/image-product-0.jpg);
 	}
-	.cart-item-icon img{
+	.cart-item-icon img {
 		border-radius: 10%;
 	}
 	.descrip-price {
 		padding: 20px 0;
 	}
-	.del-btn{
+	.del-btn {
 		padding-top: 20px;
 	}
 	.checkout {
